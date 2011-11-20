@@ -13,17 +13,25 @@ body {
 }
 
 #main, footer, header {
-    margin:0 auto 0;
+    margin: 0 auto;
     width: 600px;
 }
 
-header h1, header ul{
+header h1{
     float: left;
+}
+
+header ul{
+    float: right;
 }
 
 header li{
     float: left;
     padding-left: 1px;
     padding-right: 25px;
-    padding-top: 25px;
+    padding-top: 20px;
+}
+
+header ul li:last-child {
+    padding-right: 0;
 }
