@@ -1,11 +1,14 @@
 body {
     font: 16px Verdana,Geneva,sans-serif;
+    background: url(./m31.jpg);
     background-color:#000;
     color: #FFF;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 #main, footer {
-    background: url(./ricepaper2.png);;
+    background: url(./ricepaper2.png);
     color: #333;
     padding-top:1px;
     padding-left:10px;
@@ -29,6 +32,9 @@ footer {
 
 header h1{
     float: left;
+}
+
+header{
 }
 
 header ul{
