@@ -58,31 +58,32 @@ h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 
+/*color font*/
 body {
     font: 16px Verdana,Geneva,sans-serif;
-    background-color:#fff;
+    background-color: #d5cdc2;
+}
+/*color*/
+header{
+    background-color:#293f3a;
+    color:#fcfaf7;
+}
+/*color*/
+footer{
+    background-color: #d5cdc2;
+    color:#000;
+}
+/*centring*/
+#main div.wrap, header div.wrap,footer div.wrap{
+	margin:0 auto;
+	width: 800px;
+}
+#main{
+	background-color:#fff;
     background-image: url(./ricepaper2.png);
     color: #333;
 }
-
-header{
-    background-color:#417e71;
-    color:#fcfaf7;
-}
-footer{
-    background-color: #979172;
-    color:#000;
-}
 /*
-
-#main, footer {
-    background: url(./ricepaper2.png);
-    color: #333;
-    padding-top:1px;
-    padding-left:10px;
-    padding-bottom:1px;
-    clear: both;
-}
 
 #main {
     border-top-left-radius: 10px;
