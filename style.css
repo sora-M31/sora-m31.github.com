@@ -59,6 +59,10 @@ h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 
+p {
+	margin: 1em 0;
+}
+
 /*color font*/
 body {
     font: 16px Verdana,Geneva,sans-serif;
@@ -68,20 +72,24 @@ body {
 header{
     background-color:#293f3a;
     color:#fcfaf7;
+	padding-bottom: 0.01px;
 }
 /*color*/
 footer{
     background-color: #d5cdc2;
     color:#000;
+	padding-top: 0.01px;
 }
 /*centring*/
 #main div.wrap, header div.wrap,footer div.wrap{
 	margin:0 auto;
 	width: 800px;
+	max-width: 100%; /* don't overflow out of the #main section */
 }
 #main{
 	background-color:#fff;
     background-image: url(./ricepaper2.png);
+	padding: 0 0.01px; /* there is probably a better way of doing this */
     color: #333;
 }
 
