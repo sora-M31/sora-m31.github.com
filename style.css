@@ -76,12 +76,15 @@ h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 
-p {
-	margin: 1em 0;
-}
+p { margin: 1em 0; }
 
 em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
 strong, b {font-weight: bold; color: #000; }
+
+a {
+	text-decoration: none;
+	background: transparent;
+}
 
 hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
 
@@ -112,13 +115,19 @@ footer div.wrap {
 
 figure img {width: 100%}
 .video figure {
-    float: left; padding-right: 10px; max-width: 75%;
+    float: left; padding-right: 12px; max-width: 75%;
 }
-.video figcaption p { font-size: 0.875em }
-.video figcaption :first-child { margin-top: 0 }
+.video figcaption p { font-size: 0.875em; text-align: right }
+.video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#000 }
 
-.twocolumn .column { width: 380px }
+.twocolumn .column { width: 388px }
 .column { float: left; }
+.column :first-child { margin-top: 0 }
+.columnsection .column { padding-left: 12px; padding-right: 12px }
+.columnsection .column:first-child { padding-left: 0; border-left: 0 }
+.columnsection .column:last-child { padding-right: 0; border-left: 0 }
+
+p.tagline { font-size: 1.2em; margin-bottom: 0.7em }
 
 /* }}} end General */
 
@@ -133,8 +142,12 @@ header{
 
 header .wrap { height: 100px }
 
-header h1 { float: left; }
-header ul { float: right; }
+header h1 { height: 0; overflow: hidden }
+header ul { float: right; padding: 10px 0 }
+
+header li { height: 19px; text-align: right; font-size: 0.75em }
+header li a { color: #9879B2; border-bottom: 1px dotted #9879B2 }
+header li a:hover { color: #fff; border-bottom: 1px solid #fff }
 
 /* }}} end Header */
 
