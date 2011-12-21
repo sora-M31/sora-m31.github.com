@@ -1,3 +1,5 @@
+/*----------------------------------------------------------------------------*/
+
 /* CSS Reset {{{
  * http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -50,6 +52,11 @@ table {
 
 /* End CSS Reset }}} ======================================================== */
 
+/* General {{{ ---------------------------------------------------------------*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
 /* 'em' is a relative size to the parent font size
  * so if the parent element has 16px font, and this is 2em,
  * then the new font size is 16*2 = 32px.
@@ -63,35 +70,71 @@ p {
 	margin: 1em 0;
 }
 
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
 /*color font*/
 body {
-    font: 16px Verdana,Geneva,sans-serif;
+    font: 12px Verdana,Geneva,sans-serif;
     background-color: #d5cdc2;
 }
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/*centring*/
+#main div.wrap,
+header div.wrap,
+footer div.wrap {
+	margin:0 auto;
+	width: 800px;
+	max-width: 100%; /* don't overflow out of the #main section */
+}
+
+/* }}} end General */
+
+/* Header {{{ ----------------------------------------------------------------*/
+
 /*color*/
 header{
     background-color:#293f3a;
     color:#fcfaf7;
 	padding-bottom: 0.01px;
 }
+
+header .wrap { height: 100px }
+
+header h1 { float: left; }
+header ul { float: right; }
+
+/* }}} end Header */
+
+/* Footer {{{ ----------------------------------------------------------------*/
+
 /*color*/
 footer{
     background-color: #d5cdc2;
     color:#000;
 	padding-top: 0.01px;
 }
-/*centring*/
-#main div.wrap, header div.wrap,footer div.wrap{
-	margin:0 auto;
-	width: 800px;
-	max-width: 100%; /* don't overflow out of the #main section */
-}
+
+/* }}} end Footer */
+
+/* Main {{{ ----------------------------------------------------------------*/
+
 #main{
-	background-color:#fff;
+	font-size: 1.33333em;
+	background-color: #fff;
     background-image: url(./ricepaper2.png);
-	padding: 0 0.01px; /* there is probably a better way of doing this */
-    color: #333;
+	/* there is probably a better way of doing this */
+	padding-top: 0.01px; padding-bottom: 0.01px;
 }
+
+/* }}} end Main */
 
 /* old styles {{{
 
