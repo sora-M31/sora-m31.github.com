@@ -76,7 +76,7 @@ h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 
-p { margin: 1em 0; }
+p { margin: 1em 0; line-height: 1.6875em }
 
 em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
 strong, b {font-weight: bold; color: #000; }
@@ -127,7 +127,7 @@ figure img {width: 100%}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
 .columnsection .column:last-child { padding-right: 0; border-left: 0 }
 
-p.tagline { font-size: 1.2em; margin-bottom: 0.7em }
+p.tagline { font-size: 1.2em; margin-bottom: 0.7em; line-height: 1.51em }
 
 /* }}} end General */
 
@@ -138,6 +138,7 @@ header{
     background-color:#293f3a;
     color:#fcfaf7;
 	padding-bottom: 0.01px;
+	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
 
 header .wrap { height: 100px }
@@ -146,7 +147,7 @@ header h1 { height: 0; overflow: hidden }
 header ul { float: right; padding: 10px 0 }
 
 header li { height: 19px; text-align: right; font-size: 0.75em }
-header li a { color: #9879B2; border-bottom: 1px dotted #9879B2 }
+header li a { color: #9879B2; border-bottom: 1px dotted #9879B2; }
 header li a:hover { color: #fff; border-bottom: 1px solid #fff }
 
 /* }}} end Header */
@@ -160,6 +161,11 @@ footer{
 	padding-top: 0.01px;
 }
 
+footer p {
+	font-size: 0.8em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+}
+
 /* }}} end Footer */
 
 /* Main {{{ ----------------------------------------------------------------*/
@@ -170,7 +176,6 @@ footer{
 	/* there is probably a better way of doing this */
 	padding-top: 0.01px; padding-bottom: 0.01px;
 }
-
 
 /* }}} end Main */
 
