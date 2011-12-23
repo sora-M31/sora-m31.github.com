@@ -117,8 +117,8 @@ figure img {width: 100%}
 .video figure {
     float: left; padding-right: 12px; max-width: 75%;
 }
-.video figcaption p { font-size: 0.875em; text-align: right }
-.video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#000 }
+.video figcaption p { font-size: 0.75em; line-height: 1.41666em; text-align: right; color: #444}
+.video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#333 }
 
 .twocolumn .column { width: 388px }
 .column { float: left; }
@@ -146,7 +146,7 @@ header .wrap { height: 100px }
 header h1 { height: 0; overflow: hidden }
 header ul { float: right; padding: 10px 0 }
 
-header li { height: 19px; text-align: right; font-size: 0.75em }
+header li { float: left; padding: 0 10px }
 header li a { color: #9879B2; border-bottom: 1px dotted #9879B2; }
 header li a:hover { color: #fff; border-bottom: 1px solid #fff }
 
@@ -175,6 +175,12 @@ footer p {
     background-image: url(./ricepaper2.png);
 	/* there is probably a better way of doing this */
 	padding-top: 0.01px; padding-bottom: 0.01px;
+}
+
+#main ol, ul { padding-left: 2.5em }
+#main ol li {
+	list-style: decimal;
+	line-height: 1.4375em;
 }
 
 /* }}} end Main */
