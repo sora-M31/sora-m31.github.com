@@ -62,9 +62,9 @@ body, select, input, textarea {color: #333;}
 
 /*color font*/
 body {
-    font: 16px Helmet, Freesans, sans-serif;
-    /*font: 12px Verdana,Geneva,sans-serif;*/
-    background-color: #d5cdc2;
+	font: 16px Helmet, Freesans, sans-serif;
+	/*font: 12px Verdana,Geneva,sans-serif;*/
+	background-color: #d5cdc2;
 }
 
 /* 'em' is a relative size to the parent font size
@@ -84,16 +84,23 @@ strong, b {font-weight: bold; color: #000; }
 a {
 	text-decoration: none;
 	background: transparent;
+	color: #7F3EB7;
 }
+
+a:visited {
+	color: #C39CE5;
+}
+
+a:hover { text-decoration: underline }
 
 hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
 
 /* standardize any monospaced elements */
 pre, code, kbd, samp {
-    font-family: monospace, sans-serif;
-    background-color: #ccc;
-    color: #000;
-    padding: 0 0.2em;
+	font-family: monospace, sans-serif;
+	background-color: #ccc;
+	color: #000;
+	padding: 0 0.2em;
 }
 
 /* let's clear some floats */
@@ -115,7 +122,7 @@ footer div.wrap {
 
 figure img {width: 100%}
 .video figure {
-    float: left; padding-right: 12px; max-width: 75%;
+	float: left; padding-right: 12px; max-width: 75%;
 }
 .video figcaption p { font-size: 0.75em; line-height: 1.41666em; text-align: right; color: #444}
 .video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#333 }
@@ -135,15 +142,18 @@ p.tagline { font-size: 1.2em; margin-bottom: 0.7em; line-height: 1.51em }
 
 /*color*/
 header{
-    background-color:#293f3a;
-    color:#fcfaf7;
+	background-color:#293f3a;
+	color:#fcfaf7;
 	padding-bottom: 0.01px;
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
 
 header .wrap { height: 100px }
 
-header h1 { height: 0; overflow: hidden }
+header h1 {
+	height: 0;
+	overflow: hidden;
+}
 header ul { float: right; height: 100%; overflow: hidden }
 
 header li {
@@ -160,8 +170,16 @@ header li a {
 	background: #ddd;
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.2)
 }
-header li.current a {background: #fff; box-shadow: none}
-header li a:hover { color: #000; margin-top: -5px; height: 25px }
+header li.current a {
+	background: #fff;
+	box-shadow: none;
+}
+header li a:hover {
+	color: #000;
+	margin-top: -5px;
+	height: 25px;
+	text-decoration:none;
+}
 
 /* }}} end Header */
 
@@ -169,8 +187,8 @@ header li a:hover { color: #000; margin-top: -5px; height: 25px }
 
 /*color*/
 footer{
-    background-color: #d5cdc2;
-    color:#000;
+	background-color: #d5cdc2;
+	color:#000;
 	padding-top: 0.01px;
 }
 
@@ -185,7 +203,7 @@ footer p {
 
 #main{
 	background-color: #fff;
-    /*background-image: url(./ricepaper2.png);*/
+	/*background-image: url(./ricepaper2.png);*/
 	/* there is probably a better way of doing this */
 	padding-top: 0.01px; padding-bottom: 0.01px;
 }
@@ -197,43 +215,4 @@ footer p {
 }
 
 /* }}} end Main */
-
-/* old styles {{{
-
-#main {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-footer {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-#main, footer, header {
-    margin: 0 auto;
-    width: 600px;
-}
-
-header h1{
-    float: left;
-}
-
-header{
-}
-
-header ul{
-    float: right;
-}
-
-header li{
-    float: left;
-    padding-left: 1px;
-    padding-right: 25px;
-    padding-top: 20px;
-}
-
-header ul li:last-child {
-    padding-right: 0;
-}
-}}}*/
 
