@@ -151,8 +151,11 @@ header{
 header .wrap { height: 100px }
 
 header h1 {
-	height: 0;
+	color: rgba(255,255,255,0.1);
+	font-size: 80px;
 	overflow: hidden;
+	position: absolute; /* so it doesn't collide with the navigator */
+	white-space: nowrap; /* don't wrap around on spaces */
 }
 header ul { float: right; height: 100%; overflow: hidden }
 
