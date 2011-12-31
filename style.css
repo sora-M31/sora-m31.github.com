@@ -1,4 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*----------------------------------------------------------------------------*/
+
+/* CSS Reset {{{
+ * http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -47,7 +50,22 @@ table {
 	border-spacing: 0;
 }
 
-/* End CSS Reset ============================================================ */
+/* End CSS Reset }}} ======================================================== */
+
+/* General {{{ ---------------------------------------------------------------*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
+/*color font*/
+body {
+    font: 16px Helmet, Freesans, sans-serif;
+    /*font: 12px Verdana,Geneva,sans-serif;*/
+    background-color: #d5cdc2;
+}
 
 /* 'em' is a relative size to the parent font size
  * so if the parent element has 16px font, and this is 2em,
@@ -58,32 +76,116 @@ h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 
-/*color font*/
-body {
-    font: 16px Verdana,Geneva,sans-serif;
-    background-color: #d5cdc2;
+p { margin: 1em 0; line-height: 1.6875em }
+
+em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
+strong, b {font-weight: bold; color: #000; }
+
+a {
+	text-decoration: none;
+	background: transparent;
 }
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+    font-family: monospace, sans-serif;
+    background-color: #ccc;
+    color: #000;
+    padding: 0 0.2em;
+}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+.pagesection * { margin-left: 10px; margin-right: 10px }
+.pagesection * * { margin-left: 0; margin-right: 0;}
+
+/*centring*/
+#main div.wrap,
+header div.wrap,
+footer div.wrap {
+	margin:0 auto;
+	width: 820px; /* 800 + 10 margin on left/right */
+	max-width: 100%; /* don't overflow out of the #main section */
+}
+
+figure img {width: 100%}
+.video figure {
+    float: left; padding-right: 12px; max-width: 75%;
+}
+.video figcaption p { font-size: 0.75em; line-height: 1.41666em; text-align: right; color: #444}
+.video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#333 }
+
+.twocolumn .column { width: 388px }
+.column { float: left; }
+.column :first-child { margin-top: 0 }
+.columnsection .column { padding-left: 12px; padding-right: 12px }
+.columnsection .column:first-child { padding-left: 0; border-left: 0 }
+.columnsection .column:last-child { padding-right: 0; border-left: 0 }
+
+p.tagline { font-size: 1.2em; margin-bottom: 0.7em; line-height: 1.51em }
+
+/* }}} end General */
+
+/* Header {{{ ----------------------------------------------------------------*/
+
 /*color*/
 header{
     background-color:#293f3a;
     color:#fcfaf7;
+	padding-bottom: 0.01px;
+	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
+
+header .wrap { height: 100px }
+
+header h1 { height: 0; overflow: hidden }
+header ul { float: right; padding: 10px 0 }
+
+header li { float: left; padding: 0 10px }
+header li a { color: #9879B2; border-bottom: 1px dotted #9879B2; }
+header li a:hover { color: #fff; border-bottom: 1px solid #fff }
+
+/* }}} end Header */
+
+/* Footer {{{ ----------------------------------------------------------------*/
+
 /*color*/
 footer{
     background-color: #d5cdc2;
     color:#000;
+	padding-top: 0.01px;
 }
-/*centring*/
-#main div.wrap, header div.wrap,footer div.wrap{
-	margin:0 auto;
-	width: 800px;
+
+footer p {
+	font-size: 0.8em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
 }
+
+/* }}} end Footer */
+
+/* Main {{{ ----------------------------------------------------------------*/
+
 #main{
-	background-color:#fff;
+	background-color: #fff;
     background-image: url(./ricepaper2.png);
-    color: #333;
+	/* there is probably a better way of doing this */
+	padding-top: 0.01px; padding-bottom: 0.01px;
 }
-/*
+
+#main ol, ul { padding-left: 2.5em }
+#main ol li {
+	list-style: decimal;
+	line-height: 1.4375em;
+}
+
+/* }}} end Main */
+
+/* old styles {{{
 
 #main {
     border-top-left-radius: 10px;
@@ -120,4 +222,5 @@ header li{
 header ul li:last-child {
     padding-right: 0;
 }
-*/
+}}}*/
+
