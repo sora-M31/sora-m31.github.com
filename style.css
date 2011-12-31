@@ -144,11 +144,24 @@ header{
 header .wrap { height: 100px }
 
 header h1 { height: 0; overflow: hidden }
-header ul { float: right; padding: 10px 0 }
+header ul { float: right; height: 100%; overflow: hidden }
 
-header li { float: left; padding: 0 10px }
-header li a { color: #9879B2; border-bottom: 1px dotted #9879B2; }
-header li a:hover { color: #fff; border-bottom: 1px solid #fff }
+header li {
+	float: left;
+	padding-left: 10px;
+	position: relative;
+	bottom: -74px;
+}
+header li a {
+	display: block;
+	color: #888;
+	height: 20px;
+	padding: 3px 10px;
+	background: #ddd;
+	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.2)
+}
+header li.current a {background: #fff; box-shadow: none}
+header li a:hover { color: #000; margin-top: -5px; height: 25px }
 
 /* }}} end Header */
 
@@ -172,7 +185,7 @@ footer p {
 
 #main{
 	background-color: #fff;
-    background-image: url(./ricepaper2.png);
+    /*background-image: url(./ricepaper2.png);*/
 	/* there is probably a better way of doing this */
 	padding-top: 0.01px; padding-bottom: 0.01px;
 }
