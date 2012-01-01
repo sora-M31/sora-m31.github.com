@@ -76,7 +76,14 @@ h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 
-p { margin: 1em 0; line-height: 1.6875em }
+p {
+	margin: 0 0 1em;
+	line-height: 1.6875em;
+}
+img {
+	margin: 1em 0;
+	display: block;
+}
 
 em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
 strong, b {font-weight: bold; color: #000; }
@@ -86,14 +93,17 @@ a {
 	background: transparent;
 	color: #7F3EB7;
 }
+a:visited { color: #C39CE5; }
+a:hover, a:focus { text-decoration: underline }
 
-a:visited {
-	color: #C39CE5;
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
-
-a:hover { text-decoration: underline }
-
-hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
 
 /* standardize any monospaced elements */
 pre, code, kbd, samp {
@@ -109,12 +119,10 @@ pre, code, kbd, samp {
 .clearfix { zoom: 1; }
 
 .pagesection * { margin-left: 10px; margin-right: 10px }
-.pagesection * * { margin-left: 0; margin-right: 0;}
+.pagesection * *, .pagesection hr { margin-left: 0; margin-right: 0;}
 
 /*centring*/
-#main div.wrap,
-header div.wrap,
-footer div.wrap {
+.pagesection {
 	margin:0 auto;
 	width: 820px; /* 800 + 10 margin on left/right */
 	max-width: 100%; /* don't overflow out of the #main section */
@@ -127,12 +135,18 @@ figure img {width: 100%}
 .video figcaption p { font-size: 0.75em; line-height: 1.41666em; text-align: right; color: #444}
 .video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#333 }
 
-.twocolumn .column { width: 388px }
-.column { float: left; }
+.twocolumn .column { max-width: 388px; }
+.column { float: left; overflow: hidden; }
 .column :first-child { margin-top: 0 }
-.columnsection .column { padding-left: 12px; padding-right: 12px }
+.columnsection .column {
+	padding-left: 11px;
+	padding-right: 12px;
+	margin-left: -1px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
-.columnsection .column:last-child { padding-right: 0; border-left: 0 }
+.columnsection .column:last-child { padding-right: 0; border-right: 0}
 
 p.tagline { font-size: 1.2em; margin-bottom: 0.7em; line-height: 1.51em }
 
@@ -148,14 +162,15 @@ header{
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
 
-header .wrap { height: 100px }
+header .wrap { height: 100px; overflow: hidden }
 
-header h1 {
+header .pagesection h1 {
 	color: rgba(255,255,255,0.1);
 	font-size: 80px;
-	overflow: hidden;
-	position: absolute; /* so it doesn't collide with the navigator */
+	/*position: absolute; /* so it doesn't collide with the navigator */
 	white-space: nowrap; /* don't wrap around on spaces */
+	overflow: show;
+	height: 0
 }
 header ul { float: right; height: 100%; overflow: hidden }
 
@@ -191,6 +206,7 @@ header li a:hover {
 /*color*/
 footer{
 	background-color: #d5cdc2;
+	box-shadow: inset 0 7px 6px -6px rgba(0,0,0,0.2);
 	color:#000;
 	padding-top: 0.01px;
 }
@@ -206,10 +222,10 @@ footer p {
 
 #main{
 	background-color: #fff;
-	/*background-image: url(./ricepaper2.png);*/
-	/* there is probably a better way of doing this */
-	padding-top: 0.01px; padding-bottom: 0.01px;
+	border: 1px solid #fff; /* there is probably a better way of doing this */
 }
+
+#main .wrap { margin-top: 20px; }
 
 #main ol, ul { padding-left: 2.5em }
 #main ol li {
