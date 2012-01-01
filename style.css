@@ -83,6 +83,7 @@ p {
 img {
 	margin: 1em 0;
 	display: block;
+	max-width: 100%;
 }
 
 em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
@@ -101,7 +102,7 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px solid #ccc;
-	margin: 1em 0;
+	margin: 1.5em 0;
 	padding: 0;
 }
 
@@ -118,8 +119,6 @@ pre, code, kbd, samp {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-.pagesection * { margin-left: 10px; margin-right: 10px }
-.pagesection * *, .pagesection hr { margin-left: 0; margin-right: 0;}
 
 /*centring*/
 .pagesection {
@@ -127,6 +126,7 @@ pre, code, kbd, samp {
 	width: 820px; /* 800 + 10 margin on left/right */
 	max-width: 100%; /* don't overflow out of the #main section */
 }
+.pagepad { padding-left: 10px; padding-right: 10px }
 
 figure img {width: 100%}
 .video figure {
@@ -148,7 +148,7 @@ figure img {width: 100%}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
 .columnsection .column:last-child { padding-right: 0; border-right: 0}
 
-p.tagline { font-size: 1.2em; margin-bottom: 0.7em; line-height: 1.51em }
+p.tagline { font-size: 1.2em; line-height: 1.51em }
 
 /* }}} end General */
 
@@ -162,11 +162,15 @@ header{
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
 
-header .wrap { height: 100px; overflow: hidden }
+header .wrap {
+	height: 78px;
+	overflow: hidden;
+}
 
 header .pagesection h1 {
 	color: rgba(255,255,255,0.1);
-	font-size: 80px;
+	font-size: 43px;
+	font-family: "Arial Unicode MS",Arial,sans-serif;
 	/*position: absolute; /* so it doesn't collide with the navigator */
 	white-space: nowrap; /* don't wrap around on spaces */
 	overflow: show;
@@ -178,7 +182,7 @@ header li {
 	float: left;
 	padding-left: 10px;
 	position: relative;
-	bottom: -74px;
+	bottom: -52px;
 }
 header li a {
 	display: block;
@@ -186,7 +190,7 @@ header li a {
 	height: 20px;
 	padding: 3px 10px;
 	background: #ddd;
-	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.2)
+	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.3)
 }
 header li.current a {
 	background: #fff;
@@ -206,9 +210,14 @@ header li a:hover {
 /*color*/
 footer{
 	background-color: #d5cdc2;
+	border-top: 1px solid #fff;
 	box-shadow: inset 0 7px 6px -6px rgba(0,0,0,0.2);
-	color:#000;
-	padding-top: 0.01px;
+	color:#555;
+}
+
+footer .wrap{
+	margin-top: 24px;
+	margin-bottom: 24px;
 }
 
 footer p {
@@ -225,13 +234,15 @@ footer p {
 	border: 1px solid #fff; /* there is probably a better way of doing this */
 }
 
-#main .wrap { margin-top: 20px; }
+#main .wrap { margin-top: 34px; margin-bottom: 34px }
 
 #main ol, ul { padding-left: 2.5em }
 #main ol li {
 	list-style: decimal;
 	line-height: 1.4375em;
 }
+
+#main img { padding: 0.25em 0; }
 
 /* }}} end Main */
 
