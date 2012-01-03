@@ -97,6 +97,17 @@ a {
 a:visited { color: #C39CE5; }
 a:hover, a:focus { text-decoration: underline }
 
+blockquote:before, q:before { content: '\201C'; }
+q:after { content: '\201D'; }
+blockquote:after { content: '\201E'; }
+
+blockquote:before, blockquote:after { padding: 0 0.1em 0 0.2em; color: #999 }
+q:before, q:after { padding: 0 0.1em; }
+
+
+blockquote { font-size: 1.2em; width: 80%; margin: 0 auto 1em }
+blockquote, q { font-style: italic; font-family: Georgia,serif; color:#000 }
+
 hr {
 	display: block;
 	height: 1px;
@@ -196,7 +207,7 @@ header li.current a {
 	background: #fff;
 	box-shadow: none;
 }
-header li a:hover {
+header li a:hover, header li a:active {
 	color: #000;
 	margin-top: -5px;
 	height: 25px;
@@ -234,7 +245,11 @@ footer p {
 	border: 1px solid #fff; /* there is probably a better way of doing this */
 }
 
-#main .wrap { margin-top: 34px; margin-bottom: 34px }
+#main .wrap {
+	margin-top: 34px;
+	margin-bottom: 34px;
+	min-height: 1px;
+}
 
 #main ol, ul { padding-left: 2.5em }
 #main ol li {
