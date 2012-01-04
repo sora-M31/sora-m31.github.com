@@ -135,7 +135,7 @@ pre, code, kbd, samp {
 .pagesection {
 	margin:0 auto;
 	width: 820px; /* 800 + 10 margin on left/right */
-	max-width: 100%; /* don't overflow out of the #main section */
+	max-width: 100%; /* don't overflow out of the #page_main section */
 }
 .pagepad { padding-left: 10px; padding-right: 10px }
 
@@ -166,19 +166,19 @@ p.tagline { font-size: 1.2em; line-height: 1.51em }
 /* Header {{{ ----------------------------------------------------------------*/
 
 /*color*/
-header{
+#page_header{
 	background-color:#293f3a;
 	color:#fcfaf7;
 	padding-bottom: 0.01px;
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
 
-header .wrap {
+#page_header .wrap {
 	height: 78px;
 	overflow: hidden;
 }
 
-header .pagesection h1 {
+#page_header .pagesection h1 {
 	color: rgba(255,255,255,0.1);
 	font-size: 43px;
 	font-family: "Arial Unicode MS",Arial,sans-serif;
@@ -187,15 +187,15 @@ header .pagesection h1 {
 	overflow: show;
 	height: 0
 }
-header ul { float: right; height: 100%; overflow: hidden }
+#page_header ul { float: right; height: 100%; overflow: hidden }
 
-header li {
+#page_header li {
 	float: left;
 	padding-left: 10px;
 	position: relative;
 	bottom: -52px;
 }
-header li a {
+#page_header li a {
 	display: block;
 	color: #888;
 	height: 20px;
@@ -203,11 +203,11 @@ header li a {
 	background: #ddd;
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.3)
 }
-header li.current a {
+#page_header li.current a {
 	background: #fff;
 	box-shadow: none;
 }
-header li a:hover, header li a:active {
+#page_header li a:hover, #page_header li a:active {
 	color: #000;
 	margin-top: -5px;
 	height: 25px;
@@ -219,19 +219,19 @@ header li a:hover, header li a:active {
 /* Footer {{{ ----------------------------------------------------------------*/
 
 /*color*/
-footer{
+#page_footer{
 	background-color: #d5cdc2;
 	border-top: 1px solid #fff;
 	box-shadow: inset 0 7px 6px -6px rgba(0,0,0,0.2);
 	color:#555;
 }
 
-footer .wrap{
+#page_footer .wrap{
 	margin-top: 24px;
 	margin-bottom: 24px;
 }
 
-footer p {
+#page_footer p {
 	font-size: 0.8em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
 }
@@ -240,24 +240,24 @@ footer p {
 
 /* Main {{{ ----------------------------------------------------------------*/
 
-#main{
+#page_main{
 	background-color: #fff;
 	border: 1px solid #fff; /* there is probably a better way of doing this */
 }
 
-#main .wrap {
+#page_main .wrap {
 	margin-top: 34px;
 	margin-bottom: 34px;
 	min-height: 1px;
 }
 
-#main ol, ul { padding-left: 2.5em }
-#main ol li {
+#page_main ol, ul { padding-left: 2.5em }
+#page_main ol li {
 	list-style: decimal;
 	line-height: 1.4375em;
 }
 
-#main img { padding: 0.25em 0; }
+#page_main img { padding: 0.25em 0; }
 
 /* }}} end Main */
 
