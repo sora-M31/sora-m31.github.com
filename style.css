@@ -81,21 +81,26 @@ p {
 	line-height: 1.6875em;
 }
 img {
-	margin: 1em 0;
 	display: block;
 	max-width: 100%;
 }
 
-em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
-strong, b {font-weight: bold; color: #000; }
+p img {display: inline}
 
-a {
-	text-decoration: none;
-	background: transparent;
-	color: #7F3EB7;
+figure {
+	background: #000;
+	margin: 1.25em 0 0.25em;
 }
-a:visited { color: #C39CE5; }
-a:hover, a:focus { text-decoration: underline }
+
+.caption, figcaption {
+	font-size: 0.75em;
+	text-align: right;
+	color: #444;
+}
+.caption, figcaption,
+.caption p, figcaption p {
+	line-height: 1.41666em
+}
 
 blockquote:before, q:before { content: '\201C'; }
 q:after { content: '\201D'; }
@@ -103,7 +108,6 @@ blockquote:after { content: '\201E'; }
 
 blockquote:before, blockquote:after { padding: 0 0.1em 0 0.2em; color: #999 }
 q:before, q:after { padding: 0 0.1em; }
-
 
 blockquote { font-size: 1.2em; width: 80%; margin: 0 auto 1em }
 blockquote, q { font-style: italic; font-family: Georgia,serif; color:#000 }
@@ -130,6 +134,16 @@ pre, code, kbd, samp {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
+strong, b {font-weight: bold; color: #000; }
+
+a {
+	text-decoration: none;
+	background: transparent;
+	color: #7F3EB7;
+}
+a:visited { color: #C39CE5; }
+a:hover, a:focus { text-decoration: underline }
 
 /*centring*/
 .pagesection {
@@ -139,12 +153,14 @@ pre, code, kbd, samp {
 }
 .pagepad { padding-left: 10px; padding-right: 10px }
 
+/*
 figure img {width: 100%}
 .video figure {
 	float: left; padding-right: 12px; max-width: 75%;
 }
 .video figcaption p { font-size: 0.75em; line-height: 1.41666em; text-align: right; color: #444}
 .video figcaption :first-child { margin-top: 0; font-style: italic; font-family: Georgia,serif; color:#333 }
+*/
 
 .twocolumn .column { max-width: 388px; }
 .column { float: left; overflow: hidden; }
@@ -257,7 +273,7 @@ p.tagline { font-size: 1.2em; line-height: 1.51em }
 	line-height: 1.4375em;
 }
 
-#page_main img { padding: 0.25em 0; }
+/*#page_main img { padding: 0.25em 0; }*/
 
 /* }}} end Main */
 
