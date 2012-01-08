@@ -82,7 +82,6 @@ p {
 }
 img {
 	display: block;
-	max-width: 100%;
 }
 
 p img {display: inline}
@@ -90,6 +89,13 @@ p img {display: inline}
 figure {
 	background: #000;
 	margin: 1.25em 0 0.25em;
+	text-align: center;
+	box-shadow: 0 0 10px 0px rgba(0,0,0,0.5)
+}
+
+figure > * {
+	margin-right: auto !important;
+	max-width: 100%;
 }
 
 .caption, figcaption {
@@ -129,13 +135,21 @@ pre, code, kbd, samp {
 	padding: 0 0.2em;
 }
 
+/* hand cursor on clickable elements */
+.clickable,
+a,
+label,
+input[type=button],
+input[type=submit],
+button {cursor: pointer;}
+
 /* let's clear some floats */
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-em, i { font-style: italic; font-family: Georgia,serif; color:#000 }
-strong, b {font-weight: bold; color: #000; }
+em, i { font-style: italic; font-family: Georgia,serif; }
+strong, b {font-weight: bold; }
 
 a {
 	text-decoration: none;
@@ -148,10 +162,13 @@ a:hover, a:focus { text-decoration: underline }
 /*centring*/
 .pagesection {
 	margin:0 auto;
-	width: 820px; /* 800 + 10 margin on left/right */
+	width: 820px; /* 800 + 10 padding on left/right */
 	max-width: 100%; /* don't overflow out of the #page_main section */
 }
-.pagepad { padding-left: 10px; padding-right: 10px }
+.pagesection > .sizer {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
 /*
 figure img {width: 100%}
@@ -175,7 +192,32 @@ figure img {width: 100%}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
 .columnsection .column:last-child { padding-right: 0; border-right: 0}
 
-p.tagline { font-size: 1.2em; line-height: 1.51em }
+.tagline {
+	font-size: 1.2em;
+	line-height: 1.51em;
+}
+.footnote {
+	font-size: 0.75em;
+	line-height: 1.41666em;
+	color: #888;
+	font-family: Georgia,serif;
+}
+
+#articles.archive { margin-top:10px }
+article {width:800px; margin-bottom:25px}
+article header section {
+	float:left;
+	width:130px;
+	margin-right:25px;
+	font-size: 0.75em;
+	text-align: right;
+	color: #999;
+	line-height: 1.41666em;
+	padding-top:8px;
+}
+article > .content {width:645px; float: right;}
+
+#articles .post_title { font-size: 1.5em }
 
 /* }}} end General */
 
@@ -189,7 +231,7 @@ p.tagline { font-size: 1.2em; line-height: 1.51em }
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.5)
 }
 
-#page_header .wrap {
+#page_header > .wrap {
 	height: 78px;
 	overflow: hidden;
 }
@@ -242,12 +284,12 @@ p.tagline { font-size: 1.2em; line-height: 1.51em }
 	color:#555;
 }
 
-#page_footer .wrap{
+#page_footer > .wrap{
 	margin-top: 24px;
 	margin-bottom: 24px;
 }
 
-#page_footer p {
+#page_footer {
 	font-size: 0.8em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
 }
@@ -261,16 +303,24 @@ p.tagline { font-size: 1.2em; line-height: 1.51em }
 	border: 1px solid #fff; /* there is probably a better way of doing this */
 }
 
-#page_main .wrap {
+#page_main > .wrap {
 	margin-top: 34px;
 	margin-bottom: 34px;
 	min-height: 1px;
 }
 
-#page_main ol, ul { padding-left: 2.5em }
+/*p + ol, p + ul{ margin-top: -1em}*/
+
+#page_main ol, #page_main ul {
+	padding-left: 2.5em;
+	line-height: 1.4375em;
+	margin-bottom: 1em;
+}
 #page_main ol li {
 	list-style: decimal;
-	line-height: 1.4375em;
+}
+#page_main ul li {
+	list-style: circle;
 }
 
 /*#page_main img { padding: 0.25em 0; }*/
