@@ -5,10 +5,8 @@ layout: base
     <div id='top' class='wrap pagesection clearfix'>
     <div class='sizer'>
         <h1>&#29579;&#26199; Han Wang</h1>
-        <ul class='clearfix'>
-            <li class="current"><a href="index.html">Home</a>
-            <li><a href="about.html">About</a>
-            <li><a href="blog.html">Blog</a>
+        <ul>{% for item in site.nav %}
+            <li class="{% if item.name != page.tab %}in{% endif %}active"><a{% if item.url %} href="{{ item.url}}"{% endif %}>{{ item.name }}</a>{% endfor %}
         </ul>
     </div></div></header>
 

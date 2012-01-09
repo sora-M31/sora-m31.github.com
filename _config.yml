@@ -8,11 +8,11 @@ author: Han Wang
 email: ""
 
 nav:
-    - name: home
+    - name: Home
       url: /
-    - name: home
+    - name: About
       url: /about.html
-    - name: blog
+    - name: Blog
       url: /blog.html
 
 #googleanalytics: ""
