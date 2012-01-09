@@ -15,6 +15,6 @@ nav:
     - name: blog
       url: /blog.html
 
-googleanalytics: ""
+#googleanalytics: ""
 
 exclude: README.md

@@ -245,7 +245,11 @@ article > .content {width:645px; float: right;}
 	overflow: show;
 	height: 0
 }
-#page_header ul { float: right; height: 100%; overflow: hidden }
+#page_header ul {
+	float: right;
+	height: 78px;
+	overflow: hidden;
+}
 
 #page_header li {
 	float: left;
