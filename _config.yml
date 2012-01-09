@@ -1,0 +1,20 @@
+pygments: true
+
+permalink: /blog/:categories/:title.html
+
+title: Han Wang
+url: http://pddds.com
+author: Han
+email: ""
+
+nav:
+    - name: home
+      url: /
+    - name: home
+      url: /about.html
+    - name: blog
+      url: /blog.html
+
+googleanalytics: ""
+
+exclude: README.md
