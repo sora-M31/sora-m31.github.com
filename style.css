@@ -62,6 +62,7 @@ body, select, input, textarea {color: #333;}
 
 /*color font*/
 body {
+	text-rendering: optimizeLegibility;
 	font: 16px Helmet, Freesans, sans-serif;
 	/*font: 12px Verdana,Geneva,sans-serif;*/
 	background-color: #d5cdc2;
@@ -192,7 +193,7 @@ figure img {width: 100%}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
 .columnsection .column:last-child { padding-right: 0; border-right: 0}
 
-.tagline {
+#page_main p:first-child, .tagline {
 	font-size: 1.2em;
 	line-height: 1.51em;
 }
