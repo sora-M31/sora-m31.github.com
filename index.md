@@ -16,21 +16,5 @@ I'm _Han Wang_ and this is my website. I write games and graphics apps using cod
 
 Lastest Blog
 ------------
-<div id='articles' class='archive'>
-    <article class='clearfix'>
-        <header>
-            <section>
-            <time>Now!</time>
-            </section>
-            <a class='post_title' href='#'>Hello, World!</a>
-        </header>
-    </article>
-    <article class='clearfix'>
-        <header>
-            <section>
-            <time>Now!</time>
-            </section>
-            <a class='post_title' href='#'>Hello, World!</a>
-        </header>
-    </article>
-</div>
+{% assign postcount = 3 %}
+{% include archive.html %}

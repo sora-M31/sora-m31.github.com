@@ -173,6 +173,39 @@ a:hover, a:focus { text-decoration: underline }
 	padding-right: 10px;
 }
 
+/* }}} end General */
+
+/* Main {{{ ----------------------------------------------------------------*/
+
+#page_main{
+	background-color: #fff;
+	border: 1px solid #fff; /* there is probably a better way of doing this */
+}
+
+#page_main > .wrap {
+	margin-top: 34px;
+	margin-bottom: 34px;
+	min-height: 1px;
+}
+
+/*p + ol, p + ul{ margin-top: -1em}*/
+
+#page_main ol, #page_main ul {
+	padding-left: 2.5em;
+	line-height: 1.4375em;
+	margin-bottom: 1em;
+}
+#page_main ol {
+	list-style: decimal;
+}
+#page_main ul {
+	list-style: circle;
+}
+
+/*#page_main img { padding: 0.25em 0; }*/
+
+/* }}} end Main */
+
 /*
 figure img {width: 100%}
 .video figure {
@@ -195,7 +228,7 @@ figure img {width: 100%}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
 .columnsection .column:last-child { padding-right: 0; border-right: 0}
 
-#page_main p:first-child, .tagline {
+#page_main > p, .tagline {
 	font-size: 1.2em;
 	line-height: 1.51em;
 }
@@ -206,9 +239,16 @@ figure img {width: 100%}
 	font-family: Georgia,serif;
 }
 
-#articles.archive { margin-top:10px }
-article {width:800px; margin-bottom:25px}
+ol.archive {
+	margin: 10px 0 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+}
+
+article, .archive li {width:800px; margin-bottom:1em}
+.archive time,
 article header section {
+	display: block;
 	float:left;
 	width:130px;
 	margin-right:25px;
@@ -216,13 +256,18 @@ article header section {
 	text-align: right;
 	color: #999;
 	line-height: 1.41666em;
+}
+.archive time {
+	padding-top:6px;
+}
+article header section {
 	padding-top:8px;
 }
 article > .content {width:645px; float: right;}
 
-#articles .post_title { font-size: 1.5em }
+.archive .title { font-size: 1.5em; }
+.archivelink { padding-left:155px; font-size: 0.75em; margin-top: -0.5em; font-style: italic }
 
-/* }}} end General */
 
 /* Header {{{ ----------------------------------------------------------------*/
 
@@ -302,35 +347,4 @@ article > .content {width:645px; float: right;}
 }
 
 /* }}} end Footer */
-
-/* Main {{{ ----------------------------------------------------------------*/
-
-#page_main{
-	background-color: #fff;
-	border: 1px solid #fff; /* there is probably a better way of doing this */
-}
-
-#page_main > .wrap {
-	margin-top: 34px;
-	margin-bottom: 34px;
-	min-height: 1px;
-}
-
-/*p + ol, p + ul{ margin-top: -1em}*/
-
-#page_main ol, #page_main ul {
-	padding-left: 2.5em;
-	line-height: 1.4375em;
-	margin-bottom: 1em;
-}
-#page_main ol li {
-	list-style: decimal;
-}
-#page_main ul li {
-	list-style: circle;
-}
-
-/*#page_main img { padding: 0.25em 0; }*/
-
-/* }}} end Main */
 
