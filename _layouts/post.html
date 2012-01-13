@@ -4,12 +4,15 @@ layout: default
 <article class='clearfix'>
     <header>
         <section>
-        <time pubdate="pubdate" datetime="{{ page.date }}">{{ page.date | date:'%b %d %Y' }}</time>
+        <aside class='category'>{{ page.category | capitalize }}</aside>
+        <time pubdate="pubdate" datetime="{{ page.date }}">{{ page.date | date:'%B %d %Y' }}</time>
         </section>
         <h1 class='post_title'>{{ page.title }}</h1>
     </header>
     <div class='content'>
 {{ content }}
     </div>
-    <footer></footer>
+    <footer>
+        <section class="author"></section>
+    </footer>
 </article>
