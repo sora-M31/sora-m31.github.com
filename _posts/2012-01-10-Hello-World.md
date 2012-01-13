@@ -9,7 +9,9 @@ subtitle: "or How I finally got my site online again"
 Just more [noise][1].
 
 0. a list
-0. in order
+1. in order 
+
+---
 
 - not ordered
 - list here
