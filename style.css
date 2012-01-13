@@ -62,6 +62,7 @@ body, select, input, textarea {color: #333;}
 
 /*color font*/
 body {
+	text-rendering: optimizeLegibility;
 	font: 16px Helmet, Freesans, sans-serif;
 	/*font: 12px Verdana,Geneva,sans-serif;*/
 	background-color: #d5cdc2;
@@ -71,10 +72,12 @@ body {
  * so if the parent element has 16px font, and this is 2em,
  * then the new font size is 16*2 = 32px.
  */
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
+h1 { font-size: 2.3em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
 h4 { font-size: 1em; }
+
+h2, h3, h4 { margin-top: 1.1em }
 
 p {
 	margin: 0 0 1em;
@@ -95,6 +98,7 @@ figure {
 
 figure > * {
 	margin-right: auto !important;
+	margin-left: auto !important;
 	max-width: 100%;
 }
 
@@ -170,6 +174,39 @@ a:hover, a:focus { text-decoration: underline }
 	padding-right: 10px;
 }
 
+/* }}} end General */
+
+/* Main {{{ ----------------------------------------------------------------*/
+
+#page_main{
+	background-color: #fff;
+	border: 1px solid #fff; /* there is probably a better way of doing this */
+}
+
+#page_main > .wrap {
+	margin-top: 34px;
+	margin-bottom: 34px;
+	min-height: 1px;
+}
+
+/*p + ol, p + ul{ margin-top: -1em}*/
+
+#page_main ol, #page_main ul {
+	padding-left: 2.5em;
+	line-height: 1.4375em;
+	margin-bottom: 1em;
+}
+#page_main ol {
+	list-style: decimal;
+}
+#page_main ul {
+	list-style: circle;
+}
+
+/*#page_main img { padding: 0.25em 0; }*/
+
+/* }}} end Main */
+
 /*
 figure img {width: 100%}
 .video figure {
@@ -192,7 +229,7 @@ figure img {width: 100%}
 .columnsection .column:first-child { padding-left: 0; border-left: 0 }
 .columnsection .column:last-child { padding-right: 0; border-right: 0}
 
-.tagline {
+#page_main > p, .tagline {
 	font-size: 1.2em;
 	line-height: 1.51em;
 }
@@ -203,9 +240,16 @@ figure img {width: 100%}
 	font-family: Georgia,serif;
 }
 
-#articles.archive { margin-top:10px }
-article {width:800px; margin-bottom:25px}
+ol.archive {
+	margin: 10px 0 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+}
+
+article, .archive li {width:800px; margin-bottom:1em}
+.archive time,
 article header section {
+	display: block;
 	float:left;
 	width:130px;
 	margin-right:25px;
@@ -213,13 +257,18 @@ article header section {
 	text-align: right;
 	color: #999;
 	line-height: 1.41666em;
-	padding-top:8px;
+}
+.archive time {
+	padding-top:6px;
+}
+article header section {
+	padding-top:5px;
 }
 article > .content {width:645px; float: right;}
 
-#articles .post_title { font-size: 1.5em }
+.archive .title { font-size: 1.5em; }
+.archivelink { padding-left:155px; font-size: 0.75em; margin-top: -0.5em; font-style: italic }
 
-/* }}} end General */
 
 /* Header {{{ ----------------------------------------------------------------*/
 
@@ -245,7 +294,11 @@ article > .content {width:645px; float: right;}
 	overflow: show;
 	height: 0
 }
-#page_header ul { float: right; height: 100%; overflow: hidden }
+#page_header ul {
+	float: right;
+	height: 78px;
+	overflow: hidden;
+}
 
 #page_header li {
 	float: left;
@@ -261,7 +314,7 @@ article > .content {width:645px; float: right;}
 	background: #ddd;
 	box-shadow: inset 0 -7px 6px -6px rgba(0,0,0,0.3)
 }
-#page_header li.current a {
+#page_header li.active a {
 	background: #fff;
 	box-shadow: none;
 }
@@ -295,35 +348,4 @@ article > .content {width:645px; float: right;}
 }
 
 /* }}} end Footer */
-
-/* Main {{{ ----------------------------------------------------------------*/
-
-#page_main{
-	background-color: #fff;
-	border: 1px solid #fff; /* there is probably a better way of doing this */
-}
-
-#page_main > .wrap {
-	margin-top: 34px;
-	margin-bottom: 34px;
-	min-height: 1px;
-}
-
-/*p + ol, p + ul{ margin-top: -1em}*/
-
-#page_main ol, #page_main ul {
-	padding-left: 2.5em;
-	line-height: 1.4375em;
-	margin-bottom: 1em;
-}
-#page_main ol li {
-	list-style: decimal;
-}
-#page_main ul li {
-	list-style: circle;
-}
-
-/*#page_main img { padding: 0.25em 0; }*/
-
-/* }}} end Main */
 
