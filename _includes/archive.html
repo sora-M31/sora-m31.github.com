@@ -1,0 +1,12 @@
+<ol class="archive">{% for post in site.posts limit: postcount offset: postoffset %}
+    <li class='clearfix'>
+        <time pubdate="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: '%B %d, %Y' }}
+        </time>
+        <span class="title"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+                {{ post.title }}
+        </a></span>
+    </li>{% endfor %}
+</ol>{% if postcount %}
+<p class='archivelink'><a href='/blog/' title='Full blog archive'>More</a></p>
+{% endif %}

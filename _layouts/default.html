@@ -1,0 +1,22 @@
+---
+layout: base
+---
+    <header id="page_header">
+    <div id='top' class='wrap pagesection clearfix'>
+    <div class='sizer'>
+        <h1>&#29579;&#26199; Han Wang</h1>
+        <ul>{% for item in site.nav %}
+            <li class="{% if item.name != page.tab %}in{% endif %}active"><a{% if item.url %} href="{{ item.url}}"{% endif %}>{{ item.name }}</a>{% endfor %}
+        </ul>
+    </div></div></header>
+
+    <div id="page_main"><div class='wrap pagesection'><div class='sizer'>
+{{ content }}
+    </div></div></div> <!-- end of id main-->
+
+    <footer id="page_footer">
+    <div id='bottom' class='wrap pagesection'>
+    <div class='sizer'>
+        <p>Copyright &copy; Han 2011</p>
+        <p>Contact me: han <em>at</em> this site address
+    </div></div></footer>
