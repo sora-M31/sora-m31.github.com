@@ -18,4 +18,4 @@ nav:
 
 #googleanalytics: ""
 
-exclude: README.md
+exclude: README.md _exclude
