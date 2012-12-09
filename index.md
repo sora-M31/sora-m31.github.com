@@ -2,7 +2,7 @@
 layout: default
 tab: Home
 ---
-I'm _Han Wang_ and this is my website. I write games and graphics apps using code. Currently programmer-for-hire, so [contact me!]
+I'm _Han Wang_ and this is my website. I write games and graphics apps using code.
 
 [blog]: /blog.html "The code blog"
 [contact me!]: /about.html#contact "I'd love to hear from you"
